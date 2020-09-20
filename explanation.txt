@@ -1,0 +1,51 @@
+1. Log into our new Jupyter instance
+
+i)click the link "https://utoronto.2i2c.cloud/"
+
+ii)Use you UofT email. e.g "ruyi.pan@mail.toronto.ca"
+
+
+2. Install package habanero
+
+i)find the terminal: In the Home page, at the topright, there is a New button, click the button and choose teminal. Then you will see a black terminal page
+
+ii)Use the command line "pip install habanero" to install the package. If successfully installed, 
+    it will give you a successful message at the end
+
+iii)Open a python file, In the Home page, at the topright, there is a New button, click the button and choose Python. 
+    Then you will see a new file
+
+iv) Use command line "from habanero import Crossref" to import Crossref. Since you may use Crossref many times, 
+    You can give it a abbrevation such as cr=Crossref(). (In the following, I use cr to represent Crossref)
+
+v)There are many function in cr you can use:
+
+works - /works route
+members - /members route
+prefixes - /prefixes route
+funders - /funders route
+journals - /journals route
+types - /types route
+licenses - /licenses route
+registration_agency - get DOI minting agency
+random_dois - get random set of DOIs
+
+For example You can use cr.works() to get work routes.
+In each functions. There are parameters you need to fill in. e.g cr.works(query = "ecology") then you can x['info'] to access what you want by info name such as x['message']['total-results'].
+For more details, you can go to this link "https://github.com/sckott/habanero" see the readme file.
+    
+3. Install package  emo
+
+i) open a R file, In the Home page, at the topright, there is a New button, click the button and choose R. 
+   Then you will see a new R file.
+    
+ii) Use command line "devtools::install_github("hadley/emo")" to install the package. If you do not have the the devtools, 
+    you must intall the packages by "install.packages("devtools")"
+    
+iii) You can test by run the following code. e.g emo::ji("face") you can see the emoji which is face. Attention
+    Keywords are not unique so emo::ji will pick one for you at random. face is not a unique keyword, so you may 
+    get different face for each time using the emo::ji("face") command.
+
+iv) For more detail, please go to this link "https://github.com/hadley/emo" and see the readme file.
+
+
